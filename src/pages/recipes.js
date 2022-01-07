@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../component/Layout'
-
+import AllRecipes from '../component/AllRecipes'
 const Recipes = () => {
     return (
         <Layout>
-            <h1>Recipes</h1>
+            <AllRecipes/>
         </Layout>
     )
 }
