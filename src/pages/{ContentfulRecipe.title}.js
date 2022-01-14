@@ -5,7 +5,7 @@ import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
 import Layout from "../component/Layout"
 
 const RecipeTemplate = ({ data }) => {
-  console.log(data)
+  // console.log(data)
 
   const {
     title,
@@ -13,13 +13,11 @@ const RecipeTemplate = ({ data }) => {
     cookTime,
     servings,
     description: { description },
-    content: { tags, tools, instruction, ingredients, instructions },
+    content: { tags, tools, instructions, ingredients },
     image,
   } = data.contentfulRecipe
 
   const pathToImage = getImage(image)
-
-  console.log(prepTime, cookTime, title)
 
   return (
     <Layout>
