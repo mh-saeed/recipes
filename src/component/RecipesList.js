@@ -10,6 +10,7 @@ const RecipesList = ({ recipes = [] }) => {
         const { title, image, prepTime, cookTime } = recipe
 
         const pathToImage = getImage(image)
+
         const slug = slugify(title, { lower: true })
         return (
           <Link key={title} to={`/${slug}`} className="recipe">
