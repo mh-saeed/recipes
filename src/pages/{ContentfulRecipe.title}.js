@@ -3,6 +3,8 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
 import Layout from "../component/Layout"
+import slugify from "slugify"
+import SEO from "../component/SEO"
 
 const RecipeTemplate = ({ data }) => {
   // console.log(data)
@@ -21,6 +23,7 @@ const RecipeTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={title + " | Simple Recipe"} />
       <main className="page">
         <div className="recipe-page">
           {/* hero */}
@@ -55,8 +58,9 @@ const RecipeTemplate = ({ data }) => {
               <p className="recipe-tags">
                 Tags:{" "}
                 {tags.map((tag, index) => {
+                  const sluggedTag = slugify(tag, { lower: true })
                   return (
-                    <Link key={index} to={`/${tag}`}>
+                    <Link key={index} to={`/tags/${sluggedTag}`}>
                       {tag}
                     </Link>
                   )

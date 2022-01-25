@@ -2,10 +2,15 @@ import React from "react"
 import Layout from "../component/Layout"
 import { StaticImage } from "gatsby-plugin-image"
 import AllRecipes from "../component/AllRecipes"
+import SEO from "../component/SEO"
 
 export default function Home() {
   return (
     <Layout>
+      <SEO
+        title={"Home | " + "Simple Recipe"}
+        description={"This is home page"}
+      />
       <main className="page">
         <header className="hero">
           <StaticImage
@@ -22,7 +27,7 @@ export default function Home() {
             </div>
           </div>
         </header>
-      <AllRecipes/> 
+        <AllRecipes />
       </main>
     </Layout>
   )

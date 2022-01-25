@@ -2,6 +2,8 @@ import React from "react"
 import Layout from "../component/Layout"
 import { graphql, Link } from "gatsby"
 import setupTags from "../utils/setupTags"
+import slugify from "slugify"
+import SEO from "../component/SEO"
 
 const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
@@ -9,12 +11,15 @@ const Tags = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={"Tags | Simple Recipes"}/>
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {
             const [text, value] = tag
+            const sluggedTag = slugify(text, { lower: true })
+
             return (
-              <Link to={`/${text}`} key={index} className="tag">
+              <Link to={`/tags/${sluggedTag}`} key={index} className="tag">
                 <h5>{text}</h5>
                 <p>{value} recipe</p>
               </Link>
