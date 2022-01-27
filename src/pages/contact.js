@@ -11,7 +11,7 @@ const Contact = ({
 }) => {
   return (
     <Layout>
-      <SEO title={"Contact | Simple Recipe"} />
+      <SEO title={"Contact"} />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">

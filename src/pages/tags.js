@@ -11,7 +11,7 @@ const Tags = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={"Tags | Simple Recipes"}/>
+      <SEO title={"Tags"} />
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, index) => {

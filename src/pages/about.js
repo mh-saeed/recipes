@@ -12,7 +12,7 @@ const About = ({
 }) => {
   return (
     <Layout>
-      <SEO title={"About | Simple Recipe"} description={"This is About Page"}/>
+      <SEO title={"About"} />
       <main className="page">
         <section className="about-page">
           <article>

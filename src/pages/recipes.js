@@ -5,7 +5,7 @@ import SEO from "../component/SEO"
 const Recipes = () => {
   return (
     <Layout>
-      <SEO title={"Recipes | Simple Recipes"}/>
+      <SEO title={"Recipes"} />
       <main className="page">
         <AllRecipes />
       </main>

@@ -23,7 +23,7 @@ const RecipeTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title + " | Simple Recipe"} />
+      <SEO title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           {/* hero */}

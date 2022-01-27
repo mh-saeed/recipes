@@ -11,9 +11,7 @@ const TagTemplate = ({ data, pageContext }) => {
     <Layout>
       <SEO
         title={
-          pageContext.tag.charAt(0).toUpperCase() +
-          pageContext.tag.slice(1) +
-          " | Simple Recipes"
+          pageContext.tag.charAt(0).toUpperCase() + pageContext.tag.slice(1)
         }
       />
       <main className="page">
