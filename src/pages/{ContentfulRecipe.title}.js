@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BsClockHistory, BsClock, BsPeople } from "react-icons/bs"
 import Layout from "../component/Layout"
 import slugify from "slugify"
-import SEO from "../component/SEO"
+import Seo from "../component/SEO"
 
 const RecipeTemplate = ({ data }) => {
   // console.log(data)
@@ -20,10 +20,11 @@ const RecipeTemplate = ({ data }) => {
   } = data.contentfulRecipe
 
   const pathToImage = getImage(image)
+  // console.log(pathToImage)
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <Seo title={title} description={description} />
       <main className="page">
         <div className="recipe-page">
           {/* hero */}

@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../component/Layout"
 import { graphql } from "gatsby"
 import RecipesList from "../component/RecipesList"
-import SEO from "../component/SEO"
+import Seo from "../component/SEO"
 
 const Contact = ({
   data: {
@@ -11,7 +11,7 @@ const Contact = ({
 }) => {
   return (
     <Layout>
-      <SEO title={"Contact"} />
+      <Seo title={"Contact"} />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">
